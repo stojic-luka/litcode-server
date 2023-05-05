@@ -1,0 +1,35 @@
+{
+    "user_code": [
+        "class Solution():",
+        "\tdef sum_numbers(self, num1, num2):",
+        "\t\t",
+        "\t\treturn"
+    ],
+    "default_code": [
+        "",
+        "args = [[1, 3], [3, 5], [7, 9]]",
+        "expected = [4, 8, 16]",
+        "f = open('user.out', 'a')",
+        "try:",
+        "\tfor i in range(len(args)):",
+        "\t\tvalue = Solution().sum_numbers(args[i][0], args[i][1])",
+        "\t\tif not isinstance(value, int): raise TypeError(f'{str(value)} is not valid value for the expected return type int')",
+        "\t\tif value != expected[i]: raise ValueError(f'Expected value of {str(expected[i])}, but got {str(value)}')",
+        "\t\tf.write(f'{str(value)}\\n')",
+        "except Exception as e:",
+        "\traise e"
+    ],
+    "main_file_extention": ".py",
+    "insert_on_row": 0,
+    "return_type": "int",
+    "test_values": [
+        ["1", "3"],
+        ["3", "5"],
+        ["7", "9"]
+    ],
+    "expected_values": [
+        "4",
+        "8",
+        "16"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+
+  "clang-format.language.java.style": "{BasedOnStyle: Google, IndentWidth: 4, UseTab: Never, ColumnLimit: 165}",
+  "dataworkspace.excludedProjects": ["TestDB/TestDB.sqlproj"],
+  "java.debug.settings.onBuildFailureProceed": true
+}

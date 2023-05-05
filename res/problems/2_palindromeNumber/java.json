@@ -1,0 +1,17 @@
+{
+    "souce_code": [
+        "",
+        "",
+        ""
+    ],
+    "main_file_extention": ".java",
+    "insert_on_row": 10,
+    "test_values": [
+        
+    ],
+    "expected_values": [
+
+    ],
+    "return_type": "int",
+    "is_return_array": false
+}
