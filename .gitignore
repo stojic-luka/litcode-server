@@ -1,11 +1,3 @@
-.vscode/.clang-format
-.vscode/settings.json
-target/dependencies.txt
-target/classes/application.properties
-target/classes/com/litcode/Application.class
-target/classes/com/litcode/CodeManipulation.class
-target/classes/com/litcode/CodeResponse.class
-target/classes/com/litcode/Compilers.class
-target/classes/com/litcode/Logger.class
-target/classes/com/litcode/Mappings.class
-target/classes/com/litcode/Mappings$1.class
+/res/compilers/*
+/.idea
+/target/*

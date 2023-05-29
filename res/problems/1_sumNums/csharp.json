@@ -1,17 +1,47 @@
 {
-    "souce_code": [
+    "user_code": [
+        "public class Solution {",
+        "\tpublic int sumNumbers(int num1, int num2) {",
+        "\t\t",
+        "\t\treturn ;",
+        "\t}",
+        "}"
+    ],
+    "default_code": [
+        "using System;",
+        "using System.IO;",
+        "public class Program {",
         "",
         "",
-        ""
+        "\tpublic static void Main() {",
+        "\t\tint[,] args = new int[,] {{1, 3}, {3, 5}, {7, 9}};",
+        "\t\tint[] expected = {4, 8, 16};",
+        "\t\tSolution solution = new Solution();",
+        "\t\ttry {",
+        "\t\t\tusing (StreamWriter writer = new StreamWriter(\"user.out\"))",
+        "\t\t\t\tfor (int i = 0; i < args.GetLength(0); i++) {",
+        "\t\t\t\t\tint value = solution.sumNumbers(args[i,0], args[i,1]);",
+        "\t\t\t\t\tif (value != expected[i])",
+        "\t\t\t\t\t\tthrow new ArgumentException(String.Format(\"Expected value of {{0}}, but got {{1}}\", expected[i], value));",
+        "\t\t\t\t\twriter.Write(value + \"\\n\");",
+        "\t\t\t\t}",
+        "\t\t} catch (Exception e) {",
+        "\t\t\tthrow e;",
+        "\t\t}",
+        "\t}",
+        "}"
     ],
     "main_file_extention": ".cs",
-    "insert_on_row": 10,
+    "insert_on_row": 4,
+    "return_type": "int",
     "test_values": [
-        
+        ["1", "3"],
+        ["3", "5"],
+        ["7", "9"]
     ],
     "expected_values": [
-
-    ],
-    "return_type": "int",
-    "is_return_array": false
+        "4",
+        "8",
+        "16"
+    ]
 }

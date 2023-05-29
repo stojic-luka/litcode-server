@@ -1,7 +1,7 @@
 class Solution():
     def sum_numbers(self, num1, num2):
         print("Hello world")
-        return num1 + num2
+        return num1 + num2 + 1
 
 args = [[1, 3], [3, 5], [7, 9]]
 expected = [4, 8, 16]

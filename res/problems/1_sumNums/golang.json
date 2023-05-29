@@ -1,17 +1,51 @@
 {
-    "souce_code": [
-        "",
-        "",
-        ""
+    "user_code": [
+        "func sumNumbers(num1 int, num2 int) int {",
+        "\t",
+        "\treturn ",
+        "}"
     ],
-    "main_file_extention": ".go",
-    "insert_on_row": 10,
-    "test_values": [
+    "default_code": [
+        "package main",
+        "import (",
+        "\t\"fmt\"",
+        "\t\"os\"",
+        "\t\"strconv\"",
+        ")",
+        "",
+        "",
+        "func main() {",
+        "\targs := [][]int{{1, 3}, {3, 5}, {7, 9}}",
+        "\texpected := []int{4, 8, 16}",
+        "\tfile, err := os.OpenFile(\"user.out\", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)",
+        "\tif err != nil {",
+        "\t\tpanic(err)",
+        "\t}",
+        "\tdefer file.Close()",
+        "\tfor i := 0; i < len(args); i++ {",
+        "\t\tvalue := sumNumbers(args[i][0], args[i][1])",
+        "\t\tif value != expected[i] {",
+        "\t\t\tpanic(fmt.Sprintf(\"Expected value of %v, but got %v\", expected[i], value))",
+        "\t\t}",
+        "\t\t_, err := file.WriteString(strconv.Itoa(value) + \"\\n\")",
+        "\t\tif err != nil {",
+        "\t\t\tpanic(err)",
+        "\t\t}",
+        "\t}",
+        "}"
         
     ],
-    "expected_values": [
-
-    ],
+    "main_file_extention": ".go",
+    "insert_on_row": 6,
     "return_type": "int",
-    "is_return_array": false
+    "test_values": [
+        ["1", "3"],
+        ["3", "5"],
+        ["7", "9"]
+    ],
+    "expected_values": [
+        "4",
+        "8",
+        "16"
+    ]
 }
